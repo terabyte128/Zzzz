@@ -23,6 +23,7 @@ public class BedListener implements Listener {
         String oldHeader = event.getPlayer().getPlayerListName();
 
         int index = oldHeader.lastIndexOf(PREFIX);
+        if (index == -1) return;
 
         String after = oldHeader.substring(index + PREFIX.length());
         after = after.replaceAll("^[ \t]+|[ \t]+$", "");
